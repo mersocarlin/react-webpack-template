@@ -10,7 +10,7 @@ This is my template for building a ReactJS app with all the boilerplate you need
 
 * Change the default container in `app/app.js`
 
-```
+```js
 import React from 'react';
 import App from './containers/[your_default_container]';
 import './styles/app.scss';
@@ -20,11 +20,11 @@ React.render(<App />, document.getElementById('main'));
 
 * Change the output file name (*if you want to*) in `index.html` and `webpack.config.js`
 
-```
+```html
 <script src="./build/[your_output_file]"></script>
 ```
 
-```
+```js
 output: {
   path: 'build',
   publicPath: 'build/',
