@@ -8,10 +8,9 @@ module.exports = {
   entry: './lib/index.js',
 
   output: {
-    path: path.join(__dirname),
-    filename: 'mersocarlin-template.js',
-    libraryTarget: 'umd',
-    library: 'MersoCarlinTemplate'
+    path: 'build',
+    publicPath: 'build/',
+    filename: 'mersocarlin-template.js'
   },
 
   externals: {
@@ -20,7 +19,13 @@ module.exports = {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      "root.jQuery": "jquery"
+    })
   ],
 
   module: {
