@@ -4,7 +4,7 @@ This is my template for building a ReactJS app with all the boilerplate you need
 
 - No gulp
 - No grunt
-- es6 syntax (click [here](https://babeljs.io/docs/learn-es6/) if you need more information about es6 syntax)
+- es6 syntax (click [here](https://babeljs.io/docs/learn-es6/) if you need more information about es6)
 
 
 ## Development
