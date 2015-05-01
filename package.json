@@ -11,7 +11,6 @@
     "dev": "./node_modules/.bin/webpack-dev-server --inline --hot",
     "postinstall": "bower install"
   },
-
   "main": "lib/index.js",
   "repository": {
     "type": "git",
