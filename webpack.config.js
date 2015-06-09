@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: 'build',
     publicPath: 'build/',
-    filename: 'phonegap-upload.js'
+    filename: 'mersocarlin-template.js'
   },
 
   externals: {
