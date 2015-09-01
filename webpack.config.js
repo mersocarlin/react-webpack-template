@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: 'build',
     publicPath: 'build/',
-    filename: 'mersocarlin-template.js'
+    filename: 'app.js'
   },
 
   externals: {
@@ -24,8 +24,16 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery",
-      "root.jQuery": "jquery"
-    })
+      "root.jQuery": "jquery",
+      "Hammer": "hammerjs"
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+        'API_SERVICE_URL': JSON.stringify(process.env.API_SERVICE_URL || 'http://0.0.0.0:1234/')
+      }
+    }),
+    new webpack.IgnorePlugin(/vertx/)
   ],
 
   module: {

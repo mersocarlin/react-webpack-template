@@ -1,8 +1,12 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+$fa-font-path: '~font-awesome/fonts';
+@import "~font-awesome/scss/font-awesome";
 
-.mersocarlin-template {
-  
-}
+@import './variables';
+@import './mixins';
+//@import './fonts';
+@import './custom-materialize';
+@import './common';
+
+/* Components */
+
+/* Containers */
