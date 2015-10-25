@@ -1,10 +1,15 @@
 import 'babel/register';
 
+
 import React from 'react';
+import Router from 'react-router';
+import ReactDOM from 'react-dom';
 import FastClick from 'fastclick';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+
 
 import routes from './routes';
-import router from './utils/router';
+
 
 import './styles/animate.css';
 import 'materialize-css/bin/materialize.css';
@@ -14,21 +19,15 @@ import './styles/app.scss';
 
 
 (() => {
+
+  let history = createBrowserHistory();
+
   document.addEventListener('DOMContentLoaded', () => {
     FastClick.attach(document.body);
 
-    React.initializeTouchEvents(true);
-
-    router.create(routes);
-    router.run((Handler, state) => {
-
-      state.routes.filter((route) => {
-        return route.handler.routeAction;
-      }).forEach((route) => {
-        route.handler.routeAction(state.params);
-      });
-
-      React.render(<Handler params={state.params} />, document.body);
-    });
+    //React.initializeTouchEvents(true);
+    ReactDOM.render(
+      <Router history={history}>{routes}</Router>,
+      document.getElementById("main"));
   });
 })();
