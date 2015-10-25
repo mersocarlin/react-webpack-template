@@ -13,10 +13,6 @@ module.exports = {
     filename: 'app.js'
   },
 
-  externals: {
-   'react': 'var React'
-  },
-
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
