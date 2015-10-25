@@ -1,16 +1,14 @@
 import React from 'react';
-import ReactRouter from 'react-router';
-import { RouteHandler } from 'react-router';
+import { Link } from 'react-router';
 
 
-import FluxMixins from '../mixins/flux';
-import router from '../utils/router';
+import { FluxMixins, RouterMixins } from '../mixins';
 import { Strings } from '../constants';
 
 
 export default React.createClass({
 
-  mixins: [ FluxMixins, ReactRouter.State ],
+  mixins: [ FluxMixins, RouterMixins ],
 
   getInitialState () {
     return {
@@ -18,18 +16,20 @@ export default React.createClass({
     }
   },
 
-  componentDidMount () {
-  },
+  componentDidMount () { },
 
-  componentDidUpdate () {
-  },
+  componentDidUpdate () { },
 
   render () {
     return (
       <div className="app">
 
+        <Link to="/" activeClassName="active">Home</Link>
+        <br/>
+        <Link to="/about" activeClassName="active">About</Link>
+
         <div className="container">
-          <RouteHandler />
+          {this.props.children}
         </div>
 
         <footer className="page-footer">
