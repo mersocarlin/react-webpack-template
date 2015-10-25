@@ -8,8 +8,15 @@ export default React.createClass({
 
     mixins: [ FluxMixins, RouterMixins ],
 
-    handleClick () {
+    handleQueryClick () {
       this.transitionTo("/about", { q1: 1, q2: "test" });
+    },
+
+    handleParamsClick () {
+      const param1 = "123";
+      const param2 = 456;
+
+      this.transitionTo(`/about/${param1}/test/${param2}`);
     },
 
     render() {
@@ -17,8 +24,10 @@ export default React.createClass({
         <div className="app-page page-home">
           Home Page
 
-          <br/>
-          <a onClick={this.handleClick}>About with query</a>
+          <br />
+          <a onClick={this.handleQueryClick}>About (query)</a>
+          <br />
+          <a onClick={this.handleParamsClick}>About (params)</a>
         </div>
       );
     }

@@ -14,6 +14,7 @@ export default (
       <IndexRoute component={Home}/>
 
       <Route path="about" component={About} />
+      <Route path="about/:param1/test/:param2" component={About} />
       <Route path="*" component={NoMatch}/>
     </Route>
   </Router>
