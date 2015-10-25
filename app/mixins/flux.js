@@ -1,9 +1,6 @@
 import 'setimmediate';
 
 
-import router from '../utils/router';
-
-
 export default {
 
   statics: {
@@ -44,12 +41,6 @@ export default {
 
   executeAction (action, payload) {
     setImmediate(action.bind(null, payload));
-  },
-
-  transitionTo (route, params, query) {
-    params = params || {};
-    query = query || {};
-    router.transitionTo(route, params, query);
   }
 
 };
