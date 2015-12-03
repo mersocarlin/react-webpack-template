@@ -13,6 +13,7 @@ let history = createHistory({
   queryKey: false
 });
 
+
 export default (
   <Router history={history}>
     <Route path="/" component={App}>

@@ -11,9 +11,6 @@ import routes from './routes';
 
 
 import './styles/animate.css';
-import 'materialize-css/bin/materialize.css';
-import 'materialize-css/bin/materialize.js';
-import 'react-select/dist/default.css';
 import './styles/app.scss';
 
 
@@ -23,9 +20,6 @@ import './styles/app.scss';
     FastClick.attach(document.body);
 
     //React.initializeTouchEvents(true);
-    render(
-      routes,
-      document.getElementById("main")
-    );
+    render(routes, document.getElementById("main"));
   });
 })();
