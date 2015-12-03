@@ -30,7 +30,7 @@
     "flux": "^2.1.1",
     "font-awesome": "^4.4.0",
     "hammerjs": "^2.0.4",
-    "history": "^1.12.5",
+    "history": "^1.13.1",
     "jquery": "^2.1.4",
     "keymirror": "^0.1.1",
     "lodash": "^3.10.1",
@@ -39,7 +39,7 @@
     "object-assign": "^4.0.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-router": "^1.0.0-rc3",
+    "react-router": "^1.0.0",
     "react-select": "^0.8.2",
     "react-tap-event-plugin": "^0.2.1",
     "setimmediate": "^1.0.4"
