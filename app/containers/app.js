@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 
 import { FluxMixins, RouterMixins } from '../mixins';
@@ -24,9 +23,9 @@ export default React.createClass({
     return (
       <div className="app">
 
-        <Link to="/" activeClassName="active">Home</Link>
+        <a href="#/">Home</a>
         <br/>
-        <Link to="/about" activeClassName="active">About</Link>
+        <a href="#/about">About</a>
 
         <div className="container">
           {this.props.children}
@@ -35,7 +34,7 @@ export default React.createClass({
         <footer className="page-footer">
          <div className="footer-copyright">
             <div className="container">
-            {Strings.App.FooterText}
+            {Strings.app.footerText}
             </div>
           </div>
         </footer>

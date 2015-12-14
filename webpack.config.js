@@ -5,7 +5,7 @@ var webpack = require('webpack');
 
 module.exports = {
   context: path.join(__dirname),
-  entry: './lib/index.js',
+  entry: './app/index.js',
 
   output: {
     path: 'build',
@@ -20,16 +20,15 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery",
-      "root.jQuery": "jquery",
-      "Hammer": "hammerjs"
+      "root.jQuery": "jquery"
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+        'NODE_ENV'       : JSON.stringify(process.env.NODE_ENV || 'development'),
+        'LANGUAGE'       : JSON.stringify(process.env.LANGUAGE || 'en-US'),
         'API_SERVICE_URL': JSON.stringify(process.env.API_SERVICE_URL || 'http://0.0.0.0:1234/')
       }
-    }),
-    new webpack.IgnorePlugin(/vertx/)
+    })
   ],
 
   module: {
