@@ -9,8 +9,8 @@ import Home from './containers/home';
 import NoMatch from './containers/no-match';
 
 
-let history = createHistory({
-  queryKey: false
+const history = createHistory({
+  queryKey: false,
 });
 
 

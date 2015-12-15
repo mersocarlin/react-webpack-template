@@ -2,6 +2,6 @@ export default {
   language: 'pt-BR',
 
   app: {
-    footerText: "Texto do rodapé"
-  }
-}
+    footerText: 'Texto do rodapé',
+  },
+};

@@ -4,8 +4,8 @@
   "description": "Template for building a ReactJS app",
   "author": "Hemerson Carlin <mersocarlin@gmail.com>",
   "scripts": {
-    "test": "./node_modules/.bin/jsxhint lib/ spec/ && ./node_modules/.bin/jshint lib/ spec/ && ./node_modules/karma/bin/karma start karma.conf.js",
-    "build": "./node_modules/.bin/webpack -p",
+    "test": "./node_modules/.bin/eslint app/",
+    "build": "npm run test && ./node_modules/.bin/webpack -p",
     "dev": "./node_modules/.bin/webpack-dev-server --inline --hot"
   },
   "main": "lib/index.js",
@@ -41,9 +41,13 @@
   "devDependencies": {
     "babel": "^5.8.29",
     "babel-core": "^5.8.29",
+    "babel-eslint": "^4.1.6",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.21.0",
     "es5-shim": "^4.1.11",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.0",
+    "eslint-plugin-react": "^3.11.3",
     "file-loader": "^0.8.4",
     "imports-loader": "^0.6.5",
     "jshint": "^2.8.0",
