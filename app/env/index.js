@@ -1,6 +1,6 @@
 import config from './config';
 
 
-export default {
+export {
   config,
 };

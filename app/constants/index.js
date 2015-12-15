@@ -1,9 +1,10 @@
-import { config } from '../env';
-import Status from './status';
-import Strings from './strings/';
+import { config } from '../env/';
+import status from './status';
+import strings from './strings';
 
 
-export default {
-  Status,
-  Strings: Strings[config.language],
-};
+export const Status = status;
+
+export const Strings = strings[config.language];
+
+export default { };

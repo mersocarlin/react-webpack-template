@@ -1,6 +1,3 @@
-import 'babel/register';
-
-
 import { render } from 'react-dom';
 import FastClick from 'fastclick';
 

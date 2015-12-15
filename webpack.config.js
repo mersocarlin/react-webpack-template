@@ -44,7 +44,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'imports?_=lodash&$=jquery!jsx?harmony!babel-loader'
+        loader: 'babel'
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/,
