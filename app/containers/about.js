@@ -3,7 +3,7 @@ import React from 'react';
 
 export default React.createClass({
 
-  render() {
+  render () {
     const { query } = this.props.location;
     const params = this.props.params;
 

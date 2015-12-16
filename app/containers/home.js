@@ -8,18 +8,18 @@ export default React.createClass({
 
   mixins: [FluxMixins, RouterMixins],
 
-  handleQueryClick() {
+  handleQueryClick () {
     this.transitionTo('/about', { q1: 1, q2: 'test' });
   },
 
-  handleParamsClick() {
+  handleParamsClick () {
     const param1 = '123';
     const param2 = 456;
 
     this.transitionTo(`/about/${param1}/test/${param2}`);
   },
 
-  render() {
+  render () {
     return (
       <div className="app-page page-home">
         Home Page

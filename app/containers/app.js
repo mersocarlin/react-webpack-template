@@ -9,17 +9,17 @@ export default React.createClass({
 
   mixins: [FluxMixins, RouterMixins],
 
-  getInitialState() {
+  getInitialState () {
     return {
       pageTitle: 'Home',
     };
   },
 
-  componentDidMount() { },
+  componentDidMount () { },
 
-  componentDidUpdate() { },
+  componentDidUpdate () { },
 
-  render() {
+  render () {
     return (
       <div className="app">
 
