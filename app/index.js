@@ -1,20 +1,19 @@
 import 'babel-polyfill';
+import React from 'react';
 import { render } from 'react-dom';
-import FastClick from 'fastclick';
-
-
-import routes from './routes';
+import Root from './containers/root';
+const createHashHistory = require('history/lib/createHashHistory');
 
 
 import './styles/animate.css';
 import './styles/app.scss';
 
 
-(() => {
-  document.addEventListener('DOMContentLoaded', () => {
-    FastClick.attach(document.body);
+const history = createHashHistory({
+  queryKey: false,
+});
 
-    // React.initializeTouchEvents(true);
-    render(routes, document.getElementById('main'));
-  });
-})();
+render(
+  <Root history={history} />,
+  document.getElementById('main')
+);

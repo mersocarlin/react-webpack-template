@@ -23,19 +23,17 @@
   ],
   "dependencies": {
     "axios": "^0.7.0",
-    "fastclick": "^1.0.6",
-    "flux": "^2.1.1",
     "font-awesome": "^4.4.0",
-    "history": "^1.13.1",
+    "history": "1.13.1",
     "jquery": "^2.1.4",
     "keymirror": "^0.1.1",
     "moment": "^2.10.6",
-    "object-assign": "^4.0.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
+    "react-redux": "^4.0.1",
     "react-router": "^1.0.2",
-    "react-tap-event-plugin": "^0.2.1",
-    "setimmediate": "^1.0.4"
+    "redux": "^3.0.5",
+    "redux-router": "^1.0.0-beta5"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
@@ -52,6 +50,8 @@
     "file-loader": "^0.8.4",
     "jsx-loader": "^0.13.2",
     "node-sass": "^3.4.0",
+    "redux-promise": "^0.5.0",
+    "redux-thunk": "^1.0.2",
     "sass-loader": "^3.0.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",

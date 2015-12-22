@@ -14,14 +14,9 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery",
-      "root.jQuery": "jquery"
-    }),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV'       : JSON.stringify(process.env.NODE_ENV || 'development'),
@@ -33,7 +28,10 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
       {
         test: /\.scss$/,
         loader: 'style!css!sass?outputStyle=expanded&'

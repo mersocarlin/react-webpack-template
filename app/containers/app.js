@@ -1,23 +1,12 @@
-import React from 'react';
-
-
-import { FluxMixins, RouterMixins } from '../mixins';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import { Strings } from '../constants';
 
 
-export default React.createClass({
-
-  mixins: [FluxMixins, RouterMixins],
-
-  getInitialState () {
-    return {
-      pageTitle: 'Home',
-    };
-  },
-
-  componentDidMount () { },
-
-  componentDidUpdate () { },
+class App extends Component {
+  static propTypes = {
+    children: PropTypes.any.isRequired,
+  }
 
   render () {
     return (
@@ -40,6 +29,13 @@ export default React.createClass({
         </footer>
       </div>
     );
-  },
+  }
+}
 
-});
+
+function mapStateToProps (/* state */) {
+  return {};
+}
+
+
+export default connect(mapStateToProps)(App);

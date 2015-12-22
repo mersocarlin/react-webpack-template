@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 
-export default React.createClass({
-
+class About extends Component {
   render () {
     const { query } = this.props.location;
     const params = this.props.params;
@@ -20,6 +20,12 @@ export default React.createClass({
         </div>
       </div>
     );
-  },
+  }
+}
 
-});
+
+export default connect((/* state */) => {
+  return {
+
+  };
+})(About);
