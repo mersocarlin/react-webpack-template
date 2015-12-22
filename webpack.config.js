@@ -5,32 +5,33 @@ var webpack = require('webpack');
 
 module.exports = {
   context: path.join(__dirname),
-  entry: './lib/index.js',
+  entry: './app/index.js',
 
   output: {
     path: 'build',
     publicPath: 'build/',
-    filename: 'mersocarlin-template.js'
-  },
-
-  externals: {
-   'react': 'var React'
+    filename: 'app.js'
   },
 
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery",
-      "root.jQuery": "jquery"
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV'       : JSON.stringify(process.env.NODE_ENV || 'development'),
+        'LANGUAGE'       : JSON.stringify(process.env.LANGUAGE || 'en-US'),
+        'API_SERVICE_URL': JSON.stringify(process.env.API_SERVICE_URL || 'http://0.0.0.0:1234/')
+      }
     })
   ],
 
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
       {
         test: /\.scss$/,
         loader: 'style!css!sass?outputStyle=expanded&'
@@ -41,7 +42,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'imports?_=lodash&$=jquery!jsx?harmony!babel-loader'
+        loader: 'babel'
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/,
